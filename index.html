@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+    <title>Day Cycle Clock</title>
+</head>
+<body>
+    <div id="daylight"></div>
+    <img src="sun.svg" alt="sun" id="sun">
+    <img src="moon.svg" alt="moon" id="moon">
+    <main>
+        <h1><span id="hour">12</span>:<span id="minute">00</span><span id="am-pm">PM</span></h1>
+    </main>
+    <div class="slider">
+        <input type="range" min="0" max="96" id="day-slider" width="600px"/>
+    </div>
+</body>
+</html>
