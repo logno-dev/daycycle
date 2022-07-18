@@ -6,6 +6,8 @@ const daylight = document.getElementById("daylight");
 const sun = document.getElementById("sun");
 const moon = document.getElementById("moon");
 const dayMountains = document.getElementById("day-mountains");
+const stars = document.querySelector(".stars");
+const cloud = document.querySelector(".cloud");
 
 
 function setClock() {
@@ -51,7 +53,22 @@ function setMountains() {
     } else {
         dayMountains.style.opacity = `${(1-slider.value/96)*2}`;
     }
+}
 
+function setStars() {
+    if (slider.value < 25 || slider.value > 72) {
+        stars.style.opacity = '1';
+    } else {
+        stars.style.opacity = '0';
+    }
+}
+
+function setCloud() {
+    if (slider.value < 25 || slider.value > 72) {
+        cloud.style.transform = 'translateX(-50vw)';
+    } else {
+        cloud.style.transform = 'translateX(0)';
+    }
 }
 
 function handleSlider() {
@@ -59,6 +76,8 @@ function handleSlider() {
     setBackground();
     moveSun();
     setMountains();
+    setStars();
+    setCloud();
 }
 
 slider.addEventListener('mousedown', () => {

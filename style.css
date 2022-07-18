@@ -27,6 +27,7 @@ main {
 
 main>h1 {
     font-size: 12em;
+    z-index: 12;
 }
 
 .slider {
@@ -66,3 +67,18 @@ main>h1 {
     z-index:4;
 }
 
+.stars {
+    position: fixed;
+    width: 100vw;
+    height: 100vw;
+    z-index:1;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.cloud {
+    position: fixed;
+    z-index: 2;
+    left:10vw;
+    transition: all 0.3s ease-in-out;
+}
