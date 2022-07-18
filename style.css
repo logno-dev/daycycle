@@ -25,7 +25,7 @@ main {
     
 }
 
-main>h1 {
+#clock {
     font-size: 12em;
     z-index: 12;
 }

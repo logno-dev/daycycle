@@ -1,4 +1,5 @@
 const slider = document.getElementById("day-slider");
+const clock = document.getElementById("clock");
 const hour = document.getElementById("hour");
 const minute = document.getElementById("minute");
 const ampm = document.getElementById("am-pm");
@@ -58,8 +59,10 @@ function setMountains() {
 function setStars() {
     if (slider.value < 25 || slider.value > 72) {
         stars.style.opacity = '1';
+        clock.style.color = 'white';
     } else {
         stars.style.opacity = '0';
+        clock.style.color = 'black';
     }
 }
 
